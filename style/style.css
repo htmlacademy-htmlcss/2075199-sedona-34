@@ -5,7 +5,7 @@
     src: url("fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
   }
-  
+
   @font-face {
     font-family: "PT Sans";
     font-style: normal;
@@ -60,7 +60,7 @@
 .navigation {
   display: flex;
 }
-  
+
 .navigation-list {
   display: flex;
   font-weight: 700;
@@ -164,7 +164,7 @@
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
-} 
+}
 
 .inner-header {
   background-image: url(/images/background_filter.jpg);
@@ -290,4 +290,3 @@
 .subscription-inner {
   text-align: center;
 }
-
