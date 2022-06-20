@@ -28,6 +28,18 @@
     color: #000000;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .container {
   width: 1200px;
   min-height: 100%;
@@ -39,12 +51,8 @@
 
 .page-header {
   display: flex;
-}
-
-.page-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .main-index {
@@ -54,6 +62,7 @@
 
 .logo-link {
   margin-left: 70px;
+  margin-right: 47px;
 
 }
 
@@ -62,17 +71,26 @@
 }
 
 .navigation-list {
+  margin: auto;
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   font-weight: 700;
   color: #000000;
+  list-style-type: none;
 }
 
 .navigation-pages {
-  margin-left: 30px;
+  margin-right: 400px;
 }
 
-.navigation-user {
-  margin-left: 240px;
+.navigation-item {
+  margin-right: 34px;
+  border: 1px solid black;
+}
+
+.navigation-item:last-child {
+  margin: 0;
 }
 
 .button {
@@ -85,8 +103,16 @@
 }
 
 .greeting {
+  margin: 0;
+  padding: 0;
   background-color: #000000;
-  background-image: url(/images/backgroundwelcom_canyon.jpg);
+  background-image:
+    url(/images/backgroundwelcom_canyon.jpg);
+  background-repeat: no-repeat;
+}
+
+.greeting-welcome-image {
+  padding: 50px 371px 82px;
 }
 
 .intro-title {
@@ -94,6 +120,11 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 63px 290px 32px;
+}
+
+.intro-description {
+  margin: 0 272px 90px;
 }
 
 .advantages {
@@ -114,6 +145,63 @@
   width: 400px;
   margin: 0;
 }
+
+.advantages-item .advantages-title {
+  margin: 102px 0 30px;
+}
+
+.advantages-item .advantages-number {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-item .advantages-description {
+  margin: 0 85px;
+  margin-bottom: 102px;
+}
+
+
+.advantages-wrapper {
+  margin: 92px 85px 0;
+  padding: 0;
+}
+
+.advantages-wrapper .advantages-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-wrapper .advantages-number {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-wrapper .advantages-description {
+  margin: 0;
+}
+
+.advantages-offer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+}
+
+.advantages-offer .offer-image {
+  order: -1;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.advantages-offer .advantages-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-offer .advantages-description {
+  margin: 0 85px 80px;
+}
+
 
 .advantages-item-image {
   display: flex;
@@ -139,13 +227,26 @@
 
 .registration-title {
   font-weight: 700;
+  margin: 90px 452px 30px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.registration-description {
+  margin: 0 304px 56px;
+}
+
+.registration-button {
+  width: 544px;
+  box-sizing: content-box;
+  margin: 0 312px 90px;
+  padding: 12px 15px;
+}
+
 .subscription-page {
   background-image: url(/images/subscription_background.jpg);
+  color: #FFFFFF
 }
 
 .subscription-title {
@@ -153,15 +254,55 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 94px 398px 30px;
+}
+
+.subscription-description {
+  margin: 0;
+  padding: 0 362px 46px;
+}
+
+.field {
+  margin: 0 200px 94px;
+  padding: 0;
 }
 
 .subscription-button {
   background-color: #82B3D3;
+  width: 170px;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 12px 15px;
+}
+
+.page-footer {
+  display: flex;
+  align-items: center;
+  margin: 40px 70px 30px;
+}
+
+.footer-social-list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-right: 236px;
+}
+
+.footer-social-item {
+  margin-left: 26px;
 }
 
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
+  margin-right: 220px;
+
+}
+
+.htmlacademy-link {
+  margin-right: auto;
 }
 
 .inner-header {
@@ -175,33 +316,57 @@
 }
 
 .filter-container {
-  margin: 0 70px;
+  margin: 30px 70px 70px;
 }
 
 .inner-header-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
   font-size: 16px;
   display: flex;
+  list-style-type: none;
 }
 
 .catalog-filter {
   display: flex;
 }
 
-.catalog-filter-group:not(:first-child) {
-  margin-left: 70px;
+.catalog-filter-group {
+  min-width: 150px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-.catalog-filter-group:nth-child(3) {
-  margin-left: 175px;
+.catalog-filter-group:first-child {
+  margin-right: 70px;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-right: 175px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
 }
 
 .catalog-filter-title {
+  margin: 0;
+
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -209,19 +374,26 @@
 
 .catalog-sorting {
   display: flex;
-  margin: 0 70px;
+  margin: 58px 70px 60px;
 }
 
 .catalog-sorting-title {
+  margin: 0;
+  margin-right: 190px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .catalog-sorting-select {
   font-size: 18px;
   line-height: 21px;
-  margin-left: 190px;
+  margin-right: 90px;
+}
+
+.sort-icon {
+  border: 1px solid black;
 }
 
 .catalog-filter-buttons {
@@ -239,18 +411,33 @@
 }
 
 .hotel-card {
+  box-sizing: border-box;
   width: 340px;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 16px 0;
 }
 
 .hotel-card-coast {
+  display: flex;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  width: 300px;
   font-size: 18px;
   line-height: 21px;
+}
+
+.hotel-card-buttons {
+  display: flex;
 }
 
 .favorites {
@@ -262,10 +449,15 @@
 }
 
 .hotel-card-rating {
+  width: 300px;
   font-size: 16px;
   line-height: 20px;
   background-color: #F2F2F2;
   text-transform: uppercase;
+}
+
+.inner-divider {
+  margin: 66px 72px 30px;
 }
 
 .pagination {
@@ -278,11 +470,41 @@
   font-size: 20px;
   line-height: 36px;
   display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-right: 270px;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.pagination-item {
+  padding: 12px 24px;
+  margin-right: 8px;
+  background-color: #82B3D3;
+}
+
+.pagination-item:last-child {
+  margin: 0;
+  margin-right: 0;
 }
 
 .pagination-count {
+  display: flex;
   font-size: 18px;
   line-height: 21px;
+}
+
+.pagination-count-text {
+  margin: 0;
+  margin-right: 50px;
+}
+
+.pagination-count-input {
+  max-width: 160px;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
 }
 
 .subscription-inner {
