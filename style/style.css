@@ -97,8 +97,22 @@
 }
 
 .navigation-favorites {
+  position: relative;
   background: url(/images/favorite.svg) center no-repeat;
   margin-right: 32px;
+}
+
+.favorites-count {
+  position: absolute;
+  top: 6px;
+  right: -1px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 13px;
+  padding: 2px 3px;
 }
 
 .current-page {
@@ -143,15 +157,16 @@
   margin: 0;
   padding: 0;
   background-color: #000000;
-  background-image:
-    url(/images/backgroundwelcom_canyon.jpg);
+  background:
+    url(/images/divider.svg) bottom no-repeat,
+    url(/images/backgroundwelcom_canyon.jpg) no-repeat;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
 .greeting-welcome-image {
   display: block;
-  padding: 50px 371px 82px;
+  padding: 50px 371px 80px;
 }
 
 .intro {
