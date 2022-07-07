@@ -25,14 +25,20 @@
               </ul>
               <ul class="navigation-list navigation-user">
                 <li class="navigation-item">
-                  <a class="navigation-link navigation-search" href="#">
+                  <a class="navigation-link" href="#">
+                    <svg class="navigation-search" aria-hidden="true" focusable="false" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m18.1585 17.05-3.7105-3.7c1.0028-1.3 1.7048-3 1.7048-4.9 0-4.4-3.6102-8-8.0227-8C3.7176.45.1074 4.15.1074 8.55c0 4.4 3.6102 8 8.0227 8 1.8051 0 3.51-.6 4.9139-1.7l3.7105 3.7 1.404-1.5Zm-10.0284-2.5c-3.3093 0-6.017-2.7-6.017-6s2.7077-6 6.017-6c3.3094 0 6.0171 2.7 6.0171 6s-2.7077 6-6.017 6Z" fill="#000"/>
+                    </svg>
                     <span class="visually-hidden">
                       Поиск
                     </span>
                   </a>
                 </li>
-                <li class="navigation-item navigation-favorites">
+                <li class="navigation-item">
                   <a class="navigation-link" href="#">
+                    <svg class="navigation-favorites" aria-hidden="true" focusable="false" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.6 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.2 0c1.3 0 2.5.5 3.5 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6 6.9 6.3-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-1 .4L9 3.4a3.7 3.7 0 0 0-2.7-1.3A3.3 3.3 0 0 0 3 5.4c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" fill="#000"/>
+                    </svg>
                     <span class="visually-hidden">
                       Избранное
                     </span>
@@ -40,7 +46,7 @@
                   </a>
                 </li>
                 <li class="navigation-item">
-                  <a class=" button navigation-link" href="#">
+                  <a class=" button navigation-link">
                     Хочу сюда!
                   </a>
                 </li>
@@ -165,8 +171,8 @@
                           <dd>От 4000 ₽</dd>
                       </dl>
                       <div class="hotel-card-buttons">
-                        <a class="button" type="submit">подробнее</a>
-                        <a class="button blue-button favorites" href="#">в избранное</a>
+                        <a class="button" href="#">подробнее</a>
+                        <button class="button blue-button favorites" type="button">в избранное</button>
                       </div>
                       <div class="hotel-card-stars">
                           <span class="visually-hidden">Звезды</span>
@@ -183,8 +189,8 @@
                         <dd>От 5000 ₽</dd>
                     </dl>
                     <div class="hotel-card-buttons">
-                      <a class="button" type="submit">подробнее</a>
-                      <a class="button favorites-in" type="submit">в избранном</a>
+                      <a class="button" href="#">подробнее</a>
+                      <button class="button favorites-in" type="button">в избранном</button>
                     </div>
                     <div class="hotel-card-stars">
                         <span class="visually-hidden">Звезды</span>
@@ -201,8 +207,8 @@
                         <dd>От 2500 ₽</dd>
                     </dl>
                     <div class="hotel-card-buttons">
-                      <a class="button" type="submit">подробнее</a>
-                      <a class="button blue-button favorites" href="#">в избранное</a>
+                      <a class="button" href="#">подробнее</a>
+                      <button class="button blue-button favorites" type="button">в избранное</button>
                   </div>
                       <div class="hotel-card-stars">
                         <span class="visually-hidden">Звезды</span>
@@ -219,8 +225,8 @@
                         <dd>От 1500 ₽</dd>
                     </dl>
                     <div class="hotel-card-buttons">
-                      <a class="button" type="submit">подробнее</a>
-                      <a class="button blue-button favorites" href="#">в избранное</a>
+                      <a class="button" href="#">подробнее</a>
+                      <button class="button blue-button favorites" type="button">в избранное</button>
                   </div>
                     <div class="hotel-card-stars">
                         <span class="visually-hidden">Звезды</span>
@@ -251,18 +257,26 @@
                 </ul>
                 <div class="pagination-count">
                     <p class="pagination-count-text">Гостиниц на странице:</p>
-                    <input class="pagination-count-input" type="text">
+                    <select class="pagination-count-select" type="text">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option selected>4</option>
+                      <option>5</option>
+                    </select>
                 </div>
             </section>
             <section class="subscription-inner">
                 <h2 class="subscription-title">Подпишитесь на рассылку</h2>
                 <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
                 <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-                  <label class="subscription-field" for="subscription-email">
+                <div class="subscription-field">
+                  <label class="" for="subscription-email">
                     <input name="subscription-email" id="subscription-email" type="email" placeholder="Ваш email"
                       required>
-                    <button class="button blue-button subscription-button" type="submit">Подписаться</button>
                   </label>
+                  <button class="button blue-button subscription-button" type="submit">Подписаться</button>
+                </div>
                 </form>
               </section>
           </main>

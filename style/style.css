@@ -54,6 +54,7 @@
   display: flex;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: -11px;
 }
 
 .main-index {
@@ -64,8 +65,14 @@
 .navigation {
   width: 920px;
   display: flex;
-  align-items: center;
   margin: 0;
+  margin-top: 1px;
+  padding: 0;
+}
+
+.logo-link {
+  margin: 0;
+  margin-right: 31px;
   padding: 0;
 }
 
@@ -81,38 +88,51 @@
 
 .navigation-pages {
   margin-right: auto;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .navigation-link {
   display: block;
   margin: 0;
-  padding: 20px 18px;
+  margin-right: 2px;
+  padding: 20px 16px;
   color: #000000;
   text-decoration: none;
 }
 
+.navigation-user {
+  margin-top: 0px;
+}
+
+.navigation-user:nth-child(2) {
+  position: relative;
+}
+
 .navigation-search {
-  background: url(/images/search.svg) center no-repeat;
-  margin-right: 24px;
+  margin-right: 10px;
 }
 
 .navigation-favorites {
-  position: relative;
-  background: url(/images/favorite.svg) center no-repeat;
-  margin-right: 32px;
+  margin-right: 25px;
 }
 
 .favorites-count {
   position: absolute;
-  top: 6px;
-  right: -1px;
+  top: 2px;
+  right: 200px;
   border-radius: 50%;
   background-color: #7DB54F;
   color: #FFFFFF;
   font-size: 10px;
   font-weight: normal;
   line-height: 13px;
-  padding: 2px 3px;
+  padding: 3px 4px;
+}
+
+.navigation-item .button {
+  padding: 10px 34px 7px 35px;
+  margin-top: 12px;
 }
 
 .current-page {
@@ -121,6 +141,8 @@
 }
 
 .button {
+  font-family: "PT Sans";
+  font-style: normal;
   box-sizing: content-box;
   background-color: #756157;
   font-weight: 700;
@@ -156,17 +178,16 @@
 .greeting {
   margin: 0;
   padding: 0;
-  background-color: #000000;
   background:
-    url(/images/divider.svg) bottom no-repeat,
-    url(/images/backgroundwelcom_canyon.jpg) no-repeat;
+    url(../images/divider.svg) bottom no-repeat,
+    url(../images/backgroundwelcom_canyon.jpg) no-repeat;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
 .greeting-welcome-image {
   display: block;
-  padding: 50px 371px 80px;
+  padding: 50px 371px 83px;
 }
 
 .intro {
@@ -194,7 +215,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(131, 179, 211, 0.12);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 21px;
   list-style: none;
   margin: 0;
@@ -229,6 +250,10 @@
   padding: 92px 84px;
 }
 
+.advantages-wrapper:nth-child(2) {
+  margin-left: 10px;
+}
+
 .advantages-wrapper .advantages-title {
   margin: 0;
   margin-bottom: 30px;
@@ -250,7 +275,7 @@
   box-sizing: border-box;;
   min-width: 400px;
   margin: 0;
-  padding: 80px 84px;
+  padding: 80px 84px 77px;
 }
 
 .advantages-offer .offer-image {
@@ -260,6 +285,7 @@
 
 .advantages-offer .advantages-title {
   margin: 0;
+  margin-top: 1px;
 }
 
 .advantages-offer .advantages-description {
@@ -290,25 +316,27 @@ margin: 0;
 
 .registration-title {
   font-weight: 700;
-  margin: 90px 452px 30px;
+  margin: 92px 452px 29px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
 .registration-description {
-  margin: 0 304px 56px;
+  margin: 0 304px 54px 296px;
 }
 
 .registration-button {
+  font-size: 20px;
+  line-height: 36px;
   width: 544px;
   box-sizing: content-box;
-  margin: 0 312px 90px;
+  margin: 0 312px 93px;
   padding: 12px 15px;
 }
 
 .subscription-page {
-  background-image: url(/images/subscription_background.jpg);
+  background-image: url(../images/subscription_background.jpg);
   color: #FFFFFF
 }
 
@@ -323,7 +351,7 @@ margin: 0;
 
 .subscription-description {
   margin: 0;
-  padding: 0 362px 46px;
+  padding: 0 362px 45px;
 }
 
 .subscription-field {
@@ -339,9 +367,10 @@ margin: 0;
   border: none;
   margin: 0;
   padding: 0;
-  border-radius: 4px;
 }
 .subscription-button {
+  font-size: 20px;
+  line-height: 36px;
   background-color: #82B3D3;
   width: 170px;
   box-sizing: content-box;
@@ -352,19 +381,22 @@ margin: 0;
 .page-footer {
   display: flex;
   align-items: center;
-  margin: 40px 70px 30px;
+  margin: 46px 70px 30px;
 }
 
 .footer-social-list {
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   padding: 0;
   margin: 0;
-  margin-right: 236px;
+  margin-left: 12px;
+  margin-right: 246px;
 }
 
 .footer-social-item {
-  margin-left: 26px;
+  margin-left: 0;
 }
 
 .social-icon {
@@ -383,7 +415,7 @@ margin: 0;
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
-  margin-right: 220px;
+  margin-right: 230px;
   color: #000000;
   text-decoration: none;
 }
@@ -399,7 +431,7 @@ margin: 0;
 
 .htmlacademy-link {
   fill: #000000;
-  margin-right: auto;
+  margin-top: 2px;
 }
 
 .htmlacademy-link:hover,
@@ -412,7 +444,7 @@ margin: 0;
 }
 
 .inner-header {
-  background-image: url(/images/background_filter.jpg);
+  background-image: url(../images/background_filter.jpg);
   color: #FFFFFF;
   font-weight: 400;
   font-size: 18px;
@@ -474,7 +506,7 @@ margin: 0;
 }
 
 .breadcrumbs-link.arrow {
-  background: url(/images/breadcrumbs_arrow.svg) center no-repeat;
+  background: url(../images/breadcrumbs_arrow.svg) center no-repeat;
 }
 
 .catalog-filter {
@@ -559,7 +591,7 @@ margin: 0;
 }
 
 .sort-icon.table {
-  background: url(/images/icon-table.svg) center no-repeat;
+  background: url(../images/icon-table.svg) center no-repeat;
   border: 2px solid #000000;
   border-radius: 4px;
   padding: 14px 12px;
@@ -567,14 +599,14 @@ margin: 0;
 }
 
 .sort-icon.slideshow {
-  background: url(/images/icon-slideshow.svg) center no-repeat;
+  background: url(../images/icon-slideshow.svg) center no-repeat;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 14px 12px;
 }
 
 .sort-icon.list {
-  background: url(/images/icon-list.svg) center no-repeat;
+  background: url(../images/icon-list.svg) center no-repeat;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 14px 12px;
@@ -645,7 +677,7 @@ margin: 0;
 
 .hotel-card-stars {
   width: 140px;
-  background: url(/images/star.svg) center no-repeat;
+  background: url(../images/star.svg) center repeat;
   grid-column: 1/2;
   align-items: center;
 }
@@ -685,13 +717,12 @@ margin: 0;
   margin-right: 8px;
   background-color: #82B3D3;
   color: #FFFFFF;
+  border-radius: 4px;
 }
 
 .pagination-item:hover,
 .pagination-item:focus {
   background-color: #68A2CA;
-  border: 1px solid #82B3D3;
-  padding: 11px 23px;
 }
 
 .pagination-item:active {
@@ -705,18 +736,17 @@ margin: 0;
 }
 
 .pagination-count {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 10px;
+  align-items: center;
   font-size: 18px;
   line-height: 21px;
+  margin: auto 0;
 }
 
 .pagination-count-text {
   margin: 0;
-  margin-right: 50px;
-}
-
-.pagination-count-input {
-  max-width: 160px;
 }
 
 .pagination-current {
