@@ -125,11 +125,13 @@
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="subscription-field" for="subscription-email">
-            <input name="subscription-email" id="subscription-email" type="email" placeholder="Ваш email"
-              required>
-            <button class="button blue-button subscription-button" type="submit">Подписаться</button>
-            </label>
+            <div class="subscription-field">
+              <label class="subscription-email" for="subscription-email">
+                <input name="subscription-email" id="subscription-email" type="email" placeholder="Ваш email"
+                  required>
+              </label>
+              <button class="button blue-button subscription-button" type="submit">Подписаться</button>
+            </div>
           </form>
         </section>
     </main>
@@ -181,6 +183,56 @@
       </a>
       </section>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-button-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="date-field">
+              <label class="field-label" for="check-in-input">Дата заезда:</label>
+              <input type="text" class="date-input" id="check-in-input" name="check-in-input" value="27 апреля 2020">
+            </p>
+            <p class="warring-date">Мы не можем отправить вас в прошлое.</p>
+            <p class="date-field">
+              <label class="field-label" for="check-out-input">Дата заезда:</label>
+              <input type="text" class="date-input" id="check-out-input" name="check-out-input" value="1 сентября 2021">
+            </p>
+            <p class="notification-date">На эти даты есть свободные номера. Пока есть.</p>
+            <div class="modal-count-wrapper">
+              <p class="count-field">
+                <label class="field-label" for="count-adult">Взрослые:</label>
+                <snpa class="count-slider-wrapper">
+                  <input type="number" class="count-input" id="count-adult" name="count-adult" value="2">
+                  <button class="slider-button slider-less" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <button class="slider-button slider-more" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </snpa>
+              </p>
+              <p class="count-field">
+                <label class="field-label" for="count-kid">Дети:</label>
+                <span class="modal-tooltip"></span>
+                <snpa class="count-slider-wrapper">
+                  <input type="number" class="count-input" id="count-kid" name="count-kid" value="1">
+                  <button class="slider-button slider-less" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <button class="slider-button slider-more" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </snpa>
+              </p>
+            </div>
+            <button class="button blue-button modal-search-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
    </div>
   </body>
 </html>
