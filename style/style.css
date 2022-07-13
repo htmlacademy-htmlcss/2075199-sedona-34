@@ -24,7 +24,7 @@
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  background-color: #E5E5E5;
+  background-color: #F2F2F2;
   color: #000000;
   }
 
@@ -47,6 +47,7 @@
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -809,6 +810,8 @@ margin: 0;
   margin: 0;
   margin-right: 18px;
   padding: 5px 2px;
+  color: #FFFFFF;
+  text-decoration: none;
   fill: #FFFFFF
 }
 
@@ -1165,10 +1168,11 @@ margin: 0;
 }
 
 .catalog-hotels {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 0 18px;
-  margin: 0 70px;
+  margin: 0 70px 103px;
   text-align: start;
 }
 
@@ -1261,8 +1265,16 @@ margin: 0;
   margin-top: 17px;
 }
 
-.inner-divider {
-  margin: 66px 72px 30px;
+.catalog-hotels::after {
+  position: absolute;
+  content: "";
+  width: 1055px;
+  height: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -68px;
+  border: 1px solid #E6E6E6;
+
 }
 
 .pagination {
