@@ -155,7 +155,7 @@
 }
 
 .button {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   box-sizing: content-box;
   background-color: #756157;
@@ -308,6 +308,10 @@
 
 .advantages-offer .advantages-description {
 margin: 0;
+}
+
+.advantages-description-plus {
+  padding: 0 30px;
 }
 
 .advantages-item-image {
