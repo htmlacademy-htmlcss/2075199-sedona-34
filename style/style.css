@@ -76,6 +76,7 @@
 }
 
 .logo-link {
+  position: relative;
   margin: 0;
   margin-right: 31px;
   padding: 0;
@@ -473,6 +474,7 @@ margin: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
 .modal-container-close {
@@ -482,7 +484,7 @@ margin: 0;
 .modal {
   position: relative;
   margin: auto;
-  padding: 62px 70px 70px;
+  padding: 64px 70px 70px;
   background-color: #FFFFFF;
 }
 
@@ -498,7 +500,7 @@ margin: 0;
   height: 54px;
   padding: 0;
   margin: 0;
-  top: 62px;
+  top: 57px;
   right: 70px;
   background-color: #F2F2F2;
   background-image: url(../images/modal-button-close.svg);
@@ -525,7 +527,7 @@ margin: 0;
 
 .modal-title {
   margin: 0;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -533,8 +535,12 @@ margin: 0;
 }
 
 .date-field {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 25px;
+  align-items: center;
   margin: 0;
-  display: flex;
+  margin-bottom: 6px;
 }
 
 .count-field {
@@ -542,8 +548,8 @@ margin: 0;
   margin: 0;
 }
 
-.count-field .field-label:first-child {
-  margin-right: 56px;
+.count-field:first-child {
+  margin-right: 55px;
 }
 
 .field-label {
@@ -552,8 +558,15 @@ margin: 0;
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  margin-right: 42px;
   padding: 0;
+}
+
+.label-adult {
+  margin-right: 58px;
+}
+
+.label-kid {
+  margin-right: 44px;
 }
 
 .warring-date {
@@ -563,7 +576,7 @@ margin: 0;
   font-weight: 400;
   color: #FF5757;
   margin: 0;
-  margin-left: 152px;
+  margin-left: 155px;
   margin-bottom: 10px;
 
 }
@@ -575,14 +588,17 @@ margin: 0;
   font-weight: 400;
   color: #333333;
   margin: 0;
-  margin-left: 152px;
-  margin-bottom: 10px;
+  margin-left: 155px;
+  margin-bottom: 12px;
 }
 
 .date-input {
-  padding: 14px 200px 14px 20px;
+  padding: 15px 200px 12px 19px;
   flex-grow: 1;
   margin-bottom: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 4px;
@@ -608,6 +624,9 @@ margin: 0;
   box-sizing: border-box;
   width: 134px;
   padding: 14px 60px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 4px;
@@ -622,7 +641,6 @@ margin: 0;
 .modal-count-wrapper {
   display: flex;
   margin-bottom: 40px;
-  justify-content: space-between;
 }
 
 .modal-tooltip {
@@ -647,7 +665,7 @@ margin: 0;
   position: absolute;
   box-sizing: border-box;
   width: 256px;
-  padding: 14px 18px 18px 22px;
+  padding: 16px 18px 22px 22px;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -656,8 +674,8 @@ margin: 0;
   line-height: 21px;
   font-weight: 400;
   color: #FFFFFF;
-  top: 50px;
-  right: 49px;
+  top: 52px;
+  right: 37px;
 }
 
 .tooltip-popover::before {
@@ -667,8 +685,8 @@ margin: 0;
   height: 19px;
   background-color: #333333;
   left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  top: -7px
+  transform: translateX(-53%) rotate(45deg);
+  top: -6px
 }
 
 .tooltip-popover-close {
@@ -679,6 +697,9 @@ margin: 0;
   box-sizing: border-box;
   width: 576px;
   padding: 12px 26px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 36px;
   border-radius: 10px;
 }
 
@@ -694,7 +715,6 @@ margin: 0;
   background-color: #68A2CA;
   color:rgba(255, 255, 255, 0.3);
   outline: none;
-
 }
 
 .count-slider-wrapper {
@@ -730,8 +750,8 @@ margin: 0;
   background-position:center;
   background-repeat: no-repeat;
   opacity: 0.3;
-  left: 18px;
-  top: 60%;
+  left: 13px;
+  top: 51%;
   transform: translateY(-50%);
 }
 
@@ -740,8 +760,8 @@ margin: 0;
   background-position:center;
   background-repeat: no-repeat;
   opacity: 0.3;
-  right: 18px;
-  top: 60%;
+  right: 14px;
+  top: 52%;
   transform: translateY(-50%);
 }
 
@@ -1162,12 +1182,15 @@ margin: 0;
 
 .hotel-card-llink {
   grid-column: 1/-1;
+  text-decoration: none;
+
 }
 
 .hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  color: #000000;
   margin: 0;
   margin-top: 18px;
 }
