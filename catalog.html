@@ -69,14 +69,8 @@
                           </a>
                       </li>
                       <li class="breadcrumbs-item">
-                        <span class="breadcrumbs-link arrow">
-                              <span class="visually-hidden">Стрелка.</span>
-                        </span>
-                      </li>
-                      </li>
-                      <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" htef="#">Гостиницы</a>
-                    </li>
+                      </li>
                   </ul>
                   <section class="catalog-filters">
                     <h2 class="catalog-title visually-hidden">Список фильтров.</h2>
@@ -85,50 +79,51 @@
                             <legend class="catalog-filter-title">Инфраструктура:</legend>
                             <ul class="catalog-filter-list">
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
-                                        <input class="control-input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                                    <label class="control" for="swimming-pool">
+                                        <input class="control-input visually-hidden" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
                                         <span class="control-mark-checkbox"></span>
                                         <span class="control-label">Бассейн</span>
-                                    </lebel>
+                                    </label>
                                 </li>
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
+                                    <label class="control">
                                         <input class="control-input visually-hidden" type="checkbox" name="parcking" checked>
                                         <span class="control-mark-checkbox"></span>
                                         <span class="control-label">Парковка</span>
-                                    </lebel>
+                                    </label>
                                 </li>
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
+                                    <label class="control">
                                         <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
                                         <span class="control-mark-checkbox"></span>
                                         <span class="control-label">Wi-Fi</span>
-                                    </lebel>
+                                    </label>
+                                </li>
                             </ul>
                         </fieldset>
                         <fieldset class="catalog-filter-group">
-                            <legend class="catalog-filter-title">Тип жилья:</legend>
+                            <legend class="catalog-filter-title">Тип Жилья:</legend>
                             <ul class="catalog-filter-list">
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
+                                    <label class="control">
                                         <input class="control-input visually-hidden" type="radio" name="hotel-type" value="hotel" checked>
                                         <span class="control-mark-radio"></span>
                                         <span class="control-label">Гостиница</span>
-                                    </lebel>
+                                    </label>
                                 </li>
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
+                                    <label class="control">
                                         <input class="control-input visually-hidden" type="radio" name="hotel-type" value="motel">
                                         <span class="control-mark-radio"></span>
                                         <span class="control-label">Мотель</span>
-                                    </lebel>
+                                    </label>
                                 </li>
                                 <li class="catalog-filter-item">
-                                    <lebel class="control">
+                                    <label class="control">
                                         <input class="control-input visually-hidden" type="radio" name="hotel-type" value="apartament">
                                         <span class="control-mark-radio"></span>
                                         <span class="control-label">Апартаменты</span>
-                                    </lebel>
+                                    </label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -146,7 +141,7 @@
                           </div>
                             <div class="range">
                              <div class="range-scale">
-                              <div class="range-bar" style="left: 0; width: 230px">
+                              <div class="range-bar" style="left: 0; width: 237px">
                                 <button class="range-toggle toggle-min" type="button">
                                   <span class="visually-hidden">Изменить минимальную цену.</span>
                                 </button>
@@ -227,7 +222,7 @@
                         <span class="hotel-card-star"></span>
                         <span class="hotel-card-star"></span>
                     </div>
-                    <div class="hotel-card-rating ">Рейинг: 9,2</div>
+                    <div class="hotel-card-rating ">Рейтинг: 9,2</div>
                   </div>
                   <div class="hotel-card">
                     <a class="hotel-card-llink" href="#">
@@ -275,8 +270,8 @@
               <hr class="inner-divider">
               <section class="pagination">
                 <ul class="pagination-list">
-                    <li class="pagination-item pagination-current">
-                        <a class="pagination-link" href="#">1</a>
+                    <li class="pagination-item">
+                        <a class="pagination-link pagination-current" href="#">1</a>
                     </li>
                     <li class="pagination-item">
                       <a class="pagination-link" href="#">2</a>
@@ -295,7 +290,7 @@
                 </ul>
                 <div class="pagination-count">
                     <p class="pagination-count-text">Гостиниц на странице:</p>
-                    <select class="pagination-count-select" disabled>
+                    <select class="pagination-count-select">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -305,12 +300,12 @@
                 </div>
             </section>
             <section class="subscription-inner">
-                <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-                <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+                <h2 class="subscription-title-inner">Подпишитесь на рассылку</h2>
+                <p class="subscription-description-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
                 <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="subscription-field">
                   <label class="subscription-email-inner" for="subscription-email">
-                    <input name="subscription-email" id="subscription-email" type="email" placeholder="Ваш email"
+                    <input name="subscription-email" id="subscription-email" type="email" placeholder="Ваш e-mail"
                       required>
                   </label>
                   <button class="button blue-button subscription-button" type="submit">Подписаться</button>
